@@ -1,5 +1,11 @@
 import type { Preview } from "@storybook/react";
 
+if (window.goatcounter) {
+  window.goatcounter.count({
+    path: location.pathname + location.search + location.hash,
+  })
+}
+
 const preview: Preview = {
   parameters: {
     controls: {
