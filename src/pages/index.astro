@@ -1,38 +1,53 @@
 ---
-import "../styles.css";
-import LIC from "../images/IMG_7524.jpeg";
+import HeadLayout from "../components/HeadLayout.astro";
+import profile from "../images/IMG_0405.jpeg";
+
+const response = await fetch(
+  "https://raw.githubusercontent.com/borisliao/borisliao/refs/heads/main/README.md",
+);
+const readme = (await response.text()).split("\n");
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <script src="../type.js"></script>
-    <script
-      is:inline
-      data-goatcounter="https://borisliao.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"></script>
-    <title>Boris Liao</title>
-  </head>
-  <body>
-    <h1>Boris Liao</h1>
-    <div class="typewrite" data-period="0" data-type='[ "Software Engineer" ]'>
-      <span class="wrap"></span>
+<HeadLayout>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "1em",
+    }}
+  >
+    <img
+      src={profile.src}
+      style={{
+        width: "50vw",
+        height: "50vw",
+      }}
+      alt="Boris Liao profile picture"
+    />
+    <div>
+      {
+        readme.map((line) =>
+          line.startsWith("##") ? <h2>{line.slice(2)}</h2> : <p>{line}</p>,
+        )
+      }
     </div>
-    <figure>
-      <figcaption>
-        A apartment tower under construction in Long Island City, Jan 2025
-      </figcaption>
-      <img src={LIC.src} width={LIC.width / 10} height={LIC.height / 10} />
-      <figcaption>
-        This image is encoded with gain maps (ISO 21496-1 or the Apple variant).
-        If you use Chrome on a M series Mac, you can see the full dynamic range.
-        Otherwise, you can save the image to your photo viewer to see the
-        dynamic range* (and the full EXIF data). (*most smartphones support HDR
-        images, most Windows computers do not)
-      </figcaption>
-    </figure>
-  </body>
-</html>
+  </div>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "1em",
+    }}
+  >
+    <p>Navigate to:</p>
+    <a href="/test">Test</a>
+    <a href="https://borisliao.goatcounter.com/">Page Visit Stats</a>
+    <a
+      href={import.meta.env.DEV
+        ? "https://borisliao.github.io/storybook"
+        : "/storybook"}>Storybook</a
+    >
+  </div>
+</HeadLayout>

@@ -1,0 +1,26 @@
+---
+import "../styles.css";
+import LIC from "../images/IMG_7524.jpeg";
+import HeadLayout from "../components/HeadLayout.astro";
+---
+
+<HeadLayout>
+  <script src="../type.js"></script>
+  <h1>Boris Liao</h1>
+  <div class="typewrite" data-period="0" data-type='[ "Software Engineer" ]'>
+    <span class="wrap"></span>
+  </div>
+  <figure>
+    <figcaption>
+      A apartment tower under construction in Long Island City, Jan 2025
+    </figcaption>
+    <img src={LIC.src} width={LIC.width / 10} height={LIC.height / 10} />
+    <figcaption>
+      This image is encoded with gain maps (ISO 21496-1 or the Apple variant).
+      If you use Chrome on a M series Mac, you can see the full dynamic range.
+      Otherwise, you can save the image to your photo viewer to see the dynamic
+      range* (and the full EXIF data). (*most smartphones support HDR images,
+      most Windows computers do not)
+    </figcaption>
+  </figure>
+</HeadLayout>
