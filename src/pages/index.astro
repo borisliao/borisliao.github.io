@@ -42,15 +42,26 @@ const readme = (await response.text()).split("\n");
       gap: "1em",
     }}
   >
-    <p>Navigate to:</p>
-    <a href="/test">Test</a>
-    <a href="https://borisliao.goatcounter.com">Page Visit Stats</a>
-    <a
-      href={import.meta.env.DEV
-        ? "https://borisliao.github.io/storybook"
-        : "/storybook"}>Storybook</a
-    >
-    <a href="https://github.com/borisliao">GitHub</a>
-    <a href="https://www.linkedin.com/in/boris-liao/">LinkedIn</a>
+    <div>
+      <p>Projects:</p>
+      <a
+        href={import.meta.env.DEV
+          ? "https://borisliao.github.io/strong"
+          : "/strong"}>Strength Training (CSV → Line Chart)</a
+      >
+      <a href="https://musicpack.github.io">Music Box</a>
+    </div>
+    <div>
+      <p>Navigate to:</p>
+      <a href="/test">HDR Test Site</a>
+      <a href="https://borisliao.goatcounter.com">Page Visit Stats</a>
+      <a
+        href={import.meta.env.DEV
+          ? "https://borisliao.github.io/storybook"
+          : "/storybook"}>Storybook</a
+      >
+      <a href="https://github.com/borisliao">GitHub</a>
+      <a href="https://www.linkedin.com/in/boris-liao/">LinkedIn</a>
+    </div>
   </div>
 </HeadLayout>
