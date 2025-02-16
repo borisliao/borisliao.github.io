@@ -2,8 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "npm run storybook dev -p 6006 --no-open",
+      "name": "Storybook",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "name": "Astro",
       "request": "launch",
       "type": "node-terminal"
     }
