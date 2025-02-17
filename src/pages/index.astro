@@ -9,20 +9,10 @@ const readme = (await response.text()).split("\n");
 ---
 
 <HeadLayout>
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "1em",
-    }}
-  >
+  <div class="flex items-center justify-center gap-4">
     <img
       src={profile.src}
-      style={{
-        width: "50vw",
-        height: "50vw",
-      }}
+      class="w-1/2 h-1/2"
       alt="Boris Liao profile picture"
     />
     <div>
@@ -33,15 +23,7 @@ const readme = (await response.text()).split("\n");
       }
     </div>
   </div>
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "1em",
-    }}
-  >
+  <div class="flex items-center justify-center gap-4 flex-wrap">
     <div>
       <p>Projects:</p>
       <a
