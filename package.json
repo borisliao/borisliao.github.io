@@ -24,13 +24,13 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
-    "@storybook/addon-essentials": "^8.5.3",
-    "@storybook/addon-interactions": "^8.5.3",
-    "@storybook/addon-onboarding": "^8.5.3",
-    "@storybook/blocks": "^8.5.3",
-    "@storybook/react": "^8.5.3",
-    "@storybook/react-vite": "^8.5.3",
-    "@storybook/test": "^8.5.3",
-    "storybook": "^8.5.3"
+    "@storybook/addon-essentials": "^8.5.7",
+    "@storybook/addon-interactions": "^8.5.7",
+    "@storybook/addon-onboarding": "^8.5.7",
+    "@storybook/blocks": "^8.5.7",
+    "@storybook/react": "^8.5.7",
+    "@storybook/react-vite": "^8.5.7",
+    "@storybook/test": "^8.5.7",
+    "storybook": "^8.5.7"
   }
 }
