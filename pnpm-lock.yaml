@@ -38,6 +38,9 @@ importers:
       tailwindcss:
         specifier: ^4.0.6
         version: 4.0.6
+      vite:
+        specifier: ^6.1.0
+        version: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^3.2.4

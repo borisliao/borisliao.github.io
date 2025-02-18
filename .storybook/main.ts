@@ -20,6 +20,15 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import("vite");
+    const tailwindcss = await import("@tailwindcss/vite");
+
+    return mergeConfig(config, {
+      plugins: [tailwindcss.default()],
+    });
+  },
+
   // remove the global type above if you remove this goatcounter script
   managerHead: (head) => (`${head}
     <script
