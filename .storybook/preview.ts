@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 
-import "../src/styles/global.css";
+import "../src/styles/tailwind.css";
 
 // remove this if you remove the managerHead script in main.ts
 declare global {
