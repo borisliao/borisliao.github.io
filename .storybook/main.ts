@@ -12,7 +12,6 @@ declare global {
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "@storybook/addon-onboarding",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
@@ -21,6 +20,15 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import("vite");
+    const tailwindcss = await import("@tailwindcss/vite");
+
+    return mergeConfig(config, {
+      plugins: [tailwindcss.default()],
+    });
+  },
+
   // remove the global type above if you remove this goatcounter script
   managerHead: (head) => (`${head}
     <script

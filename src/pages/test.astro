@@ -10,11 +10,11 @@ import HeadLayout from "../components/HeadLayout.astro";
   <div class="typewrite" data-period="0" data-type='[ "Software Engineer" ]'>
     <span class="wrap"></span>
   </div>
-  <figure>
+  <figure class="flex flex-col items-center">
     <figcaption>
       A apartment tower under construction in Long Island City, Jan 2025
     </figcaption>
-    <img src={LIC.src} width={LIC.width / 10} height={LIC.height / 10} />
+    <img src={LIC.src} class="w-100" />
     <figcaption>
       This image is encoded with gain maps (ISO 21496-1 or the Apple variant).
       If you use Chrome on a M series Mac, you can see the full dynamic range.

@@ -9,23 +9,13 @@ const readme = (await response.text()).split("\n");
 ---
 
 <HeadLayout>
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "1em",
-    }}
-  >
+  <div class="flex flex-col items-center gap-4 sm:flex-row">
     <img
       src={profile.src}
-      style={{
-        width: "50vw",
-        height: "50vw",
-      }}
+      class="max-h-[50svh]"
       alt="Boris Liao profile picture"
     />
-    <div>
+    <div class="max-w-3xl">
       {
         readme.map((line) =>
           line.startsWith("##") ? <h2>{line.slice(2)}</h2> : <p>{line}</p>,
@@ -33,35 +23,51 @@ const readme = (await response.text()).split("\n");
       }
     </div>
   </div>
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "1em",
-    }}
-  >
-    <div>
+  <div class="flex flex-wrap items-center justify-center gap-8">
+    <div class="flex flex-wrap items-center gap-2">
       <p>Projects:</p>
       <a
         href={import.meta.env.DEV
           ? "https://borisliao.github.io/strong"
-          : "/strong"}>Strength Training (CSV → Line Chart)</a
+          : "/strong"}
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Strength Training (CSV → Line Chart)
+      </a>
+      <a
+        href="https://musicpack.github.io"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Music Box</a
       >
-      <a href="https://musicpack.github.io">Music Box</a>
     </div>
-    <div>
+    <div class="flex flex-wrap items-center gap-2">
       <p>Navigate to:</p>
-      <a href="/test">HDR Test Site</a>
-      <a href="https://borisliao.goatcounter.com">Page Visit Stats</a>
+      <a
+        href="/test"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >HDR Test Site
+      </a>
+      <a
+        href="https://borisliao.goatcounter.com"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Page Visit Stats
+      </a>
       <a
         href={import.meta.env.DEV
           ? "https://borisliao.github.io/storybook"
-          : "/storybook"}>Storybook</a
+          : "/storybook"}
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Storybook</a
       >
-      <a href="https://github.com/borisliao">GitHub</a>
-      <a href="https://www.linkedin.com/in/boris-liao/">LinkedIn</a>
+      <a
+        href="https://github.com/borisliao"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/boris-liao/"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >LinkedIn</a
+      >
     </div>
   </div>
 </HeadLayout>
