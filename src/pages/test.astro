@@ -2,6 +2,7 @@
 import "../styles.css";
 import LIC from "../images/IMG_7524.jpeg";
 import HeadLayout from "../components/HeadLayout.astro";
+import { Film } from "../components/Film";
 ---
 
 <HeadLayout>
@@ -14,7 +15,11 @@ import HeadLayout from "../components/HeadLayout.astro";
     <figcaption>
       A apartment tower under construction in Long Island City, Jan 2025
     </figcaption>
-    <img src={LIC.src} class="w-100" />
+    <Film
+      src={LIC.src}
+      alt="A apartment tower under construction in Long Island City, Jan 2025"
+      className="w-fit max-w-96 bg-neutral-50 sm:min-w-64"
+    />
     <figcaption>
       This image is encoded with gain maps (ISO 21496-1 or the Apple variant).
       If you use Chrome on a M series Mac, you can see the full dynamic range.
