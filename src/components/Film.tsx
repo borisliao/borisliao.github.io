@@ -1,12 +1,13 @@
-import styles from "./film.module.css";
+import type { HTMLAttributes } from "react";
 
-export const Film = ({ src }: { src: string }) => {
+export const Film = ({
+  src,
+  alt,
+  ...divProps
+}: { src: string; alt: string } & HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={styles.film}>
-      <img
-        src={src}
-        alt="A apartment tower under construction in Long Island City, Jan 2025"
-      />
+    <div {...divProps}>
+      <img src={src} alt={alt} />
     </div>
   );
 };

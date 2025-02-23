@@ -11,5 +11,9 @@ export default meta;
 
 export const _Film: StoryObj<typeof Film> = {
   render: (args) => <Film {...args} />,
-  args: { src: image },
+  args: {
+    src: image,
+    alt: "A apartment tower under construction in Long Island City, Jan 2025",
+    className: "w-96",
+  },
 };
