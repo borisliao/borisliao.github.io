@@ -11,6 +11,9 @@ export default meta;
 
 export const _Film: StoryObj<typeof Film> = {
   render: (args) => <Film {...args} />,
+  // storybook doesnt like the "," and "-" because it can't encode it in the URL
+  // https://github.com/storybookjs/storybook/issues/24139
+  // hopefully a fix comes soon
   args: {
     src: image,
     alt: "A apartment tower under construction in Long Island City, Jan 2025",
