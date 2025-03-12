@@ -11,13 +11,13 @@
     "build-storybook": "storybook build -o dist/storybook"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.0",
+    "@astrojs/react": "^4.2.1",
     "@astropub/md": "^1.0.0",
-    "@tailwindcss/vite": "^4.0.6",
     "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.6",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "astro": "^5.2.3",
+    "astro": "^5.4.3",
     "prettier": "^3.5.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
