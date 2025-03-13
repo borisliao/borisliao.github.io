@@ -6,11 +6,12 @@ export const Film = ({
   ...divProps
 }: { src: string; alt: string } & HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div
+    <figure
       {...divProps}
-      className={`${divProps.className} pt-7 pr-4 pb-16 pl-4 shadow-md`}
+      className={`${divProps.className} pt-7 pr-4 ${alt ? "pb-4" : "pb-16"} pl-4 shadow-md`}
     >
       <img src={src} alt={alt} />
-    </div>
+      <figcaption className="text-sm/6">{alt}</figcaption>
+    </figure>
   );
 };
