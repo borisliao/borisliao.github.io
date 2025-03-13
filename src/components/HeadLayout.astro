@@ -22,7 +22,7 @@ import "../styles/tailwind.css";
       }
     </style>
   </head>
-  <body class="m-4 flex flex-col items-center gap-4">
+  <body class={Astro.props.class}>
     <slot />
   </body>
 </html>
