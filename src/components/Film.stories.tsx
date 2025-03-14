@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Film } from "./Film";
 
-import image from "../images/IMG_7524.jpeg?url";
+import image from "../images/A apartment tower under construction in Long Island City.jpeg?url";
 
 const meta = {
   title: "Film",
