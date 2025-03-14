@@ -13,7 +13,7 @@ export const Film = ({
   return (
     <figure
       {...divProps}
-      className={`${divProps.className} pt-7 pr-4 ${caption ? "pb-4" : "pb-16"} pl-4 shadow-md`}
+      className={`${divProps.className} pt-7 pr-4 ${caption ? "pb-6" : "pb-16"} pl-4 shadow-md`}
     >
       <img src={src} alt={alt} />
       <figcaption className="text-sm/6">{caption}</figcaption>
