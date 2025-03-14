@@ -28,12 +28,14 @@ import { Film } from "../components/Film";
               .split("/")
               .pop()!
               .split("?")[0]
-              .replace(".jpeg", "")}
+              .split(".")[0]
+              .replace(/\.[A-Za-z0-9]+$/, "")}
             caption={image.default.src
               .split("/")
               .pop()!
               .split("?")[0]
-              .replace(".jpeg", "")}
+              .split(".")[0]
+              .replace(/\.[A-Za-z0-9]+$/, "")}
             className="w-fit max-w-96 bg-neutral-50 text-center sm:min-w-64 dark:bg-neutral-700"
           />
         </div>
