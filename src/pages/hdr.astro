@@ -1,10 +1,10 @@
 ---
 const images = await Astro.glob("../images/*.jpeg");
-import HeadLayout from "../components/HeadLayout.astro";
+import Layout from "../components/Layout.astro";
 import { Film } from "../components/Film";
 ---
 
-<HeadLayout class="flex flex-col items-center gap-4">
+<Layout class="flex flex-col items-center gap-4">
   <div>
     <p class="text-sm/6">
       Images loaded here are encoded with gain maps (ISO 21496-1 or the Apple
@@ -42,4 +42,4 @@ import { Film } from "../components/Film";
       ))
     }
   </div>
-</HeadLayout>
+</Layout>

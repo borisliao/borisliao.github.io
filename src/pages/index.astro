@@ -1,6 +1,6 @@
 ---
 import { Film } from "../components/Film";
-import HeadLayout from "../components/HeadLayout.astro";
+import Layout from "../components/Layout.astro";
 import profile from "../images/Boris Liao profile.jpeg";
 import { Markdown } from "@astropub/md";
 
@@ -10,7 +10,7 @@ const response = await fetch(
 const readme = await response.text();
 ---
 
-<HeadLayout class="flex flex-col items-center gap-4">
+<Layout class="flex flex-col items-center gap-4">
   <div class="flex flex-col items-center gap-4 sm:flex-row">
     <Film
       src={profile.src}
@@ -68,4 +68,4 @@ const readme = await response.text();
       >
     </div>
   </div>
-</HeadLayout>
+</Layout>
