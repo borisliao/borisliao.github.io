@@ -11,7 +11,7 @@
     "build-storybook": "storybook build -o dist/storybook"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.1",
+    "@astrojs/react": "^4.3.0",
     "@astropub/md": "^1.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.8",
