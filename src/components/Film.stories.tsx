@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Film } from "./Film";
 
 import image from "../images/A apartment tower under construction in Long Island City.jpeg?url";
