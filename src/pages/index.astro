@@ -1,6 +1,7 @@
 ---
 import { Film } from "../components/Film";
 import Layout from "../components/Layout.astro";
+import { Notebook } from "../components/Notebook";
 import profile from "../images/Boris Liao profile.jpeg";
 import { Markdown } from "@astropub/md";
 
@@ -25,15 +26,17 @@ const readme = await response.text();
     <div class="flex flex-wrap items-center gap-2">
       <p>Projects:</p>
       <a
-        href={import.meta.env.DEV
-          ? "https://borisliao.github.io/strong"
-          : "/strong"}
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        href={import.meta.env.DEV ? "https://borisliao.com/strong" : "/strong"}
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Strength Training
       </a>
       <a
         href="https://musicpack.github.io"
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Music Box</a
       >
     </div>
@@ -41,31 +44,44 @@ const readme = await response.text();
       <p>Navigate to:</p>
       <a
         href="/hdr"
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >My Photography (HDR)
       </a>
       <a
         href="https://borisliao.goatcounter.com"
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Page Visit Stats
       </a>
       <a
         href={import.meta.env.DEV
-          ? "https://borisliao.github.io/storybook"
+          ? "https://borisliao.com/storybook"
           : "/storybook"}
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Storybook</a
       >
       <a
         href="https://github.com/borisliao"
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >GitHub</a
       >
       <a
         href="https://www.linkedin.com/in/boris-liao/"
-        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white
+          hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >LinkedIn</a
       >
+    </div>
+    <div class="w-50">
+      <Notebook href="https://borisliao.substack.com">FIELD NOTES</Notebook>
     </div>
   </div>
 </Layout>
