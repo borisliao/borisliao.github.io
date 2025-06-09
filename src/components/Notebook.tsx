@@ -1,6 +1,7 @@
 import type { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
 
-export const FieldNotes = ({
+export const Notebook = ({
+  children,
   ...props
 }: DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -18,7 +19,7 @@ export const FieldNotes = ({
         className="text-center font-[Futura] text-3xl font-semibold tracking-wider
           dark:text-gray-400"
       >
-        FIELD NOTES
+        {children}
       </p>
     </a>
   );
