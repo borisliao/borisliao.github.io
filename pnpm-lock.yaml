@@ -61,8 +61,8 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       prettier-plugin-classnames:
-        specifier: ^0.7.8
-        version: 0.7.8(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
+        specifier: ^0.8.0
+        version: 0.8.0(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
       storybook:
         specifier: ^9.0.6
         version: 9.0.6(@testing-library/dom@10.4.0)(prettier@3.5.3)
@@ -1852,11 +1852,11 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-classnames@0.7.8:
-    resolution: {integrity: sha512-TC2a9n/kQKF1Zv1nQTpbIwJJJDLaiRO0BGqEMTmRRfROofbigM4e5zHLsv5Nl6xV53WU1xpjPoRdoaLemLt/oA==}
-    engines: {node: '>=14'}
+  prettier-plugin-classnames@0.8.0:
+    resolution: {integrity: sha512-pYt575fvbFRU8R8G3i0DXea3ONMJMRo0con0zn3lZibyciSOKDRVhMeDPaZn7iMNiIBxMFdF8gFpjfWH7BK5KA==}
+    engines: {node: '>=18'}
     peerDependencies:
-      prettier: ^2 || ^3
+      prettier: ^3
       prettier-plugin-astro: '*'
       prettier-plugin-svelte: '*'
     peerDependenciesMeta:
@@ -2502,6 +2502,9 @@ packages:
     peerDependencies:
       typescript: ^4.9.4 || ^5.0.2
       zod: ^3
+
+  zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
   zod@3.25.56:
     resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
@@ -4493,9 +4496,10 @@ snapshots:
       prettier: 3.5.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-classnames@0.7.8(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
+  prettier-plugin-classnames@0.8.0(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
     dependencies:
       prettier: 3.5.3
+      zod: 3.22.4
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
 
@@ -5104,6 +5108,8 @@ snapshots:
     dependencies:
       typescript: 5.7.3
       zod: 3.25.56
+
+  zod@3.22.4: {}
 
   zod@3.25.56: {}
 
